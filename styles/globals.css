@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@layer base {
+    body {
+        @apply bg-gray-50 text-gray-900;
+        @apply min-h-screen;
+    }
+
+    ::selection {
+        @apply text-white bg-blue-600;
+    }
+}
