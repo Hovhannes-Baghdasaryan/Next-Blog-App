@@ -6,8 +6,6 @@ import {MoonIcon, SunIcon} from "@heroicons/react/solid"
 
 import Button from "../shared/Button";
 import {useSession, signIn, signOut} from 'next-auth/react'
-import Image from "next/image";
-
 
 const Header = () => {
     const [isMounted, setIsMounted] = React.useState(false)
@@ -46,11 +44,24 @@ const Header = () => {
                     ) : (
                         <>
                             <img src={data.user?.image || ""} alt={data.user?.name || ""}
-                                   className="rounded-full border-2 border-blue-600 w-8 h-8"  />
-                            <Button onClickCallback={() => signOut()} buttonContext={"Sign Out"}/>
+                                 className="rounded-full border-2 border-blue-600 w-8 h-8"/>
+                            <div className="relative space-y-5">
+                                <Button onClickCallback={() => signOut()} buttonContext={"Sign Out"}/>
+                                <div className="absolute top-50 right-0 bg-blue-700 rounded-md w-full">
+                                    <div className="border-b w-full text-center py-1 hover:bg-gray-500 rounded-t-md">
+                                        Menu 1
+                                    </div>
+                                    <div className="border-b w-full text-center py-1 hover:bg-gray-500">
+                                        Menu 2
+                                    </div>
+                                    <div className="w-full text-center py-1 hover:bg-gray-500 rounded-b-md">
+                                        Menu 3
+                                    </div>
+                                </div>
+                            </div>
+
                         </>
-                    )
-                    }
+                    )}
                 </div>
             </div>
         </header>
