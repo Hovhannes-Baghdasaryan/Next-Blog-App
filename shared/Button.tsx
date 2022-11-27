@@ -12,8 +12,7 @@ const Button: React.FC<ButtonPropType> = (props) => {
     const buttonInitialStyle = "bg-blue-600 hover:bg-blue-700 whitespace-nowrap text-white px-4 py-1 border-2"
 
     return (
-        <button type="button" onClick={onClickCallback}
-                className={buttonInitialStyle + extraStyle}>
+        <button type="button" onClick={onClickCallback} className={buttonInitialStyle + extraStyle}>
             {buttonContext}
         </button>
     );

@@ -1,15 +1,14 @@
 import React from 'react';
+import Text from "../shared/Text";
+import Title from '../shared/Title';
 
 const LandingPage = () => (
-    <div className="space-y-6">
-        <div
-            className="flex flex-col space-y-4 lg:text-6xl md:text-5xl sm:text-4xl text-2xl font-bold capitalize">
-            <span>The blogging platform</span>
-            <span>for developers</span>
+    <div className="space-y-5">
+        <div className="flex flex-col space-y-4 lg:text-6xl md:text-5xl sm:text-4xl capitalize">
+            <Title title={"The blogging platform"} />
+            <Title title={"for developers"} />
         </div>
-        <h2 className="text-xl sm:text-2xl">
-            Start your developer career
-        </h2>
+        <Text text={"Start your developer career"}/>
     </div>
 );
 

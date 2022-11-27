@@ -5,7 +5,7 @@ import {signOut} from "next-auth/react";
 export const flyoutMenuOptions = (userName: string | null | undefined) => ([
     {
         id: "1",
-        menuName: <Button extraStyle="border-0 rounded-t" onClickCallback={() => signOut()} buttonContext={"Sign Out"}/>,
+        menuName: <Button extraStyle="border-0 rounded-t" onClickCallback={() => signOut()} buttonContext={"Sign out"}/>,
         transitionDuration: 1000,
         translateX: 12,
         roundStyle: "rounded-t",

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import Layout from "../sections/Layout";
+import Button from "../shared/Button";
 
 const NotFoundPage = () => (
     <Layout>
@@ -10,11 +11,9 @@ const NotFoundPage = () => (
                 <p className="text-xl">We cannot find the page you are looking for.</p>
             </div>
 
-            <Link href={"/"} legacyBehavior>
+            <Link href={"/"}>
                 <div>
-                    <button type="button" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md border-4">
-                        Go Back Home
-                    </button>
+                    <Button buttonContext={"Go Back Home"} extraStyle="border-solid border-4 rounded-md"/>
                 </div>
             </Link>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {flyoutMenuOptions} from "../constant/flyoutMenuConstant";
+import {flyoutMenuOptions} from "../../constant/flyoutMenuConstant";
 
 const FlyoutMenu: React.FC<{ isMenuHidden: boolean; userName: string | null | undefined }> = (props) => {
     const {isMenuHidden, userName} = props
@@ -12,7 +12,7 @@ const FlyoutMenu: React.FC<{ isMenuHidden: boolean; userName: string | null | un
 
                 const spacingNotButton = element.id !== "1" ? "py-1" : ""
 
-                const menuItemStyle = `${element.border} ${element.roundStyle} ${spacingNotButton} w-full bg-blue-600 text-center text-white ${hiddenStyle} transition-all ease-out ${animationDuration} hover:bg-gray-500`
+                const menuItemStyle = `${element.border} border-gray-600 dark:border-white ${element.roundStyle} ${spacingNotButton} w-full bg-blue-600 text-center text-white ${hiddenStyle} transition-all ease-out ${animationDuration} hover:bg-gray-500`
 
                 return (
                     <div key={element.id} className={menuItemStyle}>
