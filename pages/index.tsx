@@ -8,7 +8,7 @@ const Home: React.FC = () => (
         <Layout>
             <section className="flex flex-col items-center space-y-5 mt-24 px-38">
                 <LandingPage/>
-                <Button buttonContext={"Start Your Blog"}/>
+                <Button buttonContext={"Start Your Blog"} extraStyle="border-solid border-2 rounded-md"/>
             </section>
         </Layout>
     </div>
