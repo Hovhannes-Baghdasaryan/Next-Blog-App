@@ -10,7 +10,7 @@ const Home: React.FC = () => (
             <section className="flex flex-col items-center space-y-5 mt-24 px-38">
                 <LandingPage/>
                 <Link href={"/posts"}>
-                    <Button buttonContext={"Start Your Blog"} extraStyle="border-solid border-2 rounded-md"/>
+                    <Button buttonContext={"Start Your Blog"} />
                 </Link>
             </section>
         </Layout>

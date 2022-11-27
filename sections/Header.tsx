@@ -43,7 +43,7 @@ const Header = () => {
                     <div className="flex space-x-4 items-center">
                         <RenderThemeChanger/>
                         {!data ? (
-                            <Button extraStyle="border-0 rounded-md" onClickCallback={() => signIn()} buttonContext={"Sign In"}/>
+                            <Button onClickCallback={() => signIn()} buttonContext={"Sign In"}/>
                         ) : (
                             <div  className="cursor-pointer">
                                 <Image source={data.user?.image} imageAlt={data.user?.image} onClickCallback={() => setIsHidden(!isHidden)}/>

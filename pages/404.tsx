@@ -13,7 +13,7 @@ const NotFoundPage = () => (
 
             <Link href={"/"}>
                 <div>
-                    <Button buttonContext={"Go Back Home"} extraStyle="border-solid border-4 rounded-md"/>
+                    <Button buttonContext={"Go Back Home"} />
                 </div>
             </Link>
         </div>

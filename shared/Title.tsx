@@ -4,9 +4,11 @@ const Title: React.FC<{ title: string | number }> = (props) => {
     const {title} = props
 
     return (
-        <span className="text-5xl font-bold">
-            {title}
-        </span>
+        <div style={{lineHeight: 1}}>
+            <span style={{fontSize: 26}} className="font-bold">
+                {title}
+            </span>
+        </div>
     );
 }
 

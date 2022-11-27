@@ -6,8 +6,11 @@ const FlyoutMenu: React.FC<{ isMenuHidden: boolean; userName: string | null | un
 
     return (
         <div className={`absolute mt-2`}>
-            {flyoutMenuOptions(userName).map((element) => {
-                const hiddenStyle = isMenuHidden ? `opacity-0 translate-x-${element.translateX}` : "opacity-1 translate-x-0"
+            {flyoutMenuOptions.map((element) => {
+                const translateX = `opacity-0 translate-x-${element.translateX}`
+
+                const hiddenStyle = isMenuHidden ? translateX : "opacity-1 translate-x-0"
+
                 const animationDuration = `duration-${element.transitionDuration}`
 
                 const spacingNotButton = element.id !== "1" ? "py-1" : ""
@@ -15,7 +18,7 @@ const FlyoutMenu: React.FC<{ isMenuHidden: boolean; userName: string | null | un
                 const menuItemStyle = `${element.border} border-gray-600 dark:border-white ${element.roundStyle} ${spacingNotButton} w-full bg-blue-600 text-center text-white ${hiddenStyle} transition-all ease-out ${animationDuration} hover:bg-gray-500`
 
                 return (
-                    <div key={element.id} className={menuItemStyle}>
+                    <div key={element.id} style={{opacity: isMenuHidden ? 0 : 1, transform: isMenuHidden ? `TranslateX(${element.translateX})` : "TranslateX(0)" , transition: `all ${element.transitionDuration}`}} >
                         {element.menuName}
                     </div>
                 );

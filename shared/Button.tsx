@@ -3,16 +3,23 @@ import React from 'react';
 interface ButtonPropType {
     onClickCallback?: () => void,
     buttonContext: string;
-    extraStyle?: string
+    extraStyle?: React.CSSProperties
 }
 
 const Button: React.FC<ButtonPropType> = (props) => {
     const {onClickCallback, buttonContext, extraStyle} = props
 
-    const buttonInitialStyle = "bg-blue-600 hover:bg-blue-700 whitespace-nowrap text-white px-4 py-1 border-2"
+    const buttonInitialStyle: React.CSSProperties = {
+        backgroundColor: "blue",
+        width: "100%",
+        whiteSpace: "nowrap",
+        color: "white",
+        padding: "4px 8px",
+        borderRadius: 4
+    }
 
     return (
-        <button type="button" onClick={onClickCallback} className={buttonInitialStyle + extraStyle}>
+        <button type="button" onClick={onClickCallback} style={{...buttonInitialStyle, ...extraStyle}}>
             {buttonContext}
         </button>
     );
