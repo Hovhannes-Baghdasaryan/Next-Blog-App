@@ -13,7 +13,7 @@ const AddEmployeeForm: React.FC<{ departmentId: string | undefined; setIsShowEmp
 
     const onBackCallback = () => setIsShowEmployeeForm(false)
 
-    const buttonExtraStyle = {backgroundColor: "blueviolet"}
+    const buttonExtraStyle = {backgroundColor: "blue"}
 
     const onEmployeeAddCallback = async (values: addEmployeeType) => {
         try {
